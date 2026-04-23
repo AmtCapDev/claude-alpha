@@ -8,3 +8,6 @@ __pycache__/
 build/
 dist/
 .ipynb_checkpoints/
+output/
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
