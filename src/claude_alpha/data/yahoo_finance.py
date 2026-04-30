@@ -29,12 +29,3 @@ def get_price_data(ticker: str, period: str = "3mo") -> dict:
         "current_price": float(last_close),
         "avg_volume": float(daily_prices["Volume"].mean()),
     }
-
-
-if __name__ == "__main__":
-    result = get_price_data("AAPL")
-    print(result["daily_prices"].tail())
-    print(f"annualized_return:     {result['annualized_return'] * 100:.2f}%")
-    print(f"annualized_volatility: {result['annualized_volatility'] * 100:.2f}%")
-    print(f"current_price:         {result['current_price']:.2f}")
-    print(f"avg_volume:            {result['avg_volume']:,.0f}")

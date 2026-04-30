@@ -21,10 +21,3 @@ def get_news(ticker: str) -> list[dict]:
             }
         )
     return headlines
-
-
-if __name__ == "__main__":
-    for article in get_news("AAPL"):
-        print(f"[{article['publish_date']}] {article['publisher']}")
-        print(f"  {article['title']}")
-        print(f"  {article['link']}")

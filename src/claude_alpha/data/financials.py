@@ -49,15 +49,3 @@ def get_financials(ticker: str) -> dict:
         "free_cash_flow": free_cash_flow,
         "revenue_growth": revenue_growth,
     }
-
-
-if __name__ == "__main__":
-    result = get_financials("AAPL")
-    print(f"revenue:              ${result['revenue']:,.0f}")
-    print(f"net_income:           ${result['net_income']:,.0f}")
-    print(f"operating_margin:     {result['operating_margin'] * 100:.2f}%")
-    print(f"total_debt:           ${result['total_debt']:,.0f}")
-    print(f"total_equity:         ${result['total_equity']:,.0f}")
-    print(f"debt_to_equity_ratio: {result['debt_to_equity_ratio']:.2f}")
-    print(f"free_cash_flow:       ${result['free_cash_flow']:,.0f}")
-    print(f"revenue_growth:       {result['revenue_growth'] * 100:.2f}%")
