@@ -11,12 +11,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 # Shared helpers live in _base.py — every analyst agent uses the same plumbing
 # for CLI args, prompt assembly, the Claude API call, and writing output JSON.
 from agents._base import (
-    build_arg_parser,        # argparse setup: ticker + --risk-profile flags
-    build_user_prompt,       # wraps the data block + risk profile into the user turn
-    call_claude,             # sends system+user prompt to Claude, parses JSON reply
-    load_env_or_exit,        # loads ANTHROPIC_API_KEY from .env, exits if missing
-    print_recommendation,    # pretty-prints the verdict to the terminal
-    save_recommendation,     # writes output/{TICKER}_{agent}.json
+    build_arg_parser,  # argparse setup: ticker + --risk-profile flags
+    build_user_prompt,  # wraps the data block + risk profile into the user turn
+    call_claude,  # sends system+user prompt to Claude, parses JSON reply
+    load_env_or_exit,  # loads ANTHROPIC_API_KEY from .env, exits if missing
+    print_recommendation,  # pretty-prints the verdict to the terminal
+    save_recommendation,  # writes output/{TICKER}_{agent}.json
 )
 
 # Yahoo Finance helper — returns a dict with daily OHLCV plus precomputed
